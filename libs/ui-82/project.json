@@ -1,0 +1,9 @@
+{
+  "name": "ui-82",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/ui-82/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project ui-82 --web",
+  "targets": {}
+}

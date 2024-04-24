@@ -1,0 +1,9 @@
+{
+  "name": "ui-95",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/ui-95/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project ui-95 --web",
+  "targets": {}
+}

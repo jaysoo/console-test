@@ -1,0 +1,9 @@
+{
+  "name": "ui-43",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/ui-43/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project ui-43 --web",
+  "targets": {}
+}
