@@ -1,13 +1,33 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import styles from './app.module.css';
+import * as React from 'react';
 
-import NxWelcome from './nx-welcome';
+
+const Child = React.forwardRef(({}:any, ref: any) => {
+  const [state,setState] = React.useState(false);
+
+  console.log('>>> child render')
+  React.useImperativeHandle(ref, () => ({
+    toggle: () => {
+      console.log('toggle', state);
+      setState(!state);
+    }
+  }));
+  console.log('>>> ', state);
+
+  return <span>State: {state}</span>;
+});
 
 export function App() {
+  const ref = React.createRef<any>();
+
+  React.useLayoutEffect(() => {
+    console.log('effect', ref);
+    if (ref.current) {
+      ref.current.toggle();
+    }
+  }, [ref]);
+
   return (
-    <div>
-      <NxWelcome title="react-app" />
-    </div>
+    <Child ref={ref}/>
   );
 }
 
